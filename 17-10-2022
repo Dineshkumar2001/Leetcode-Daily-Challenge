@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        vector<int> ans(26,0);
+        for(auto x:sentence){
+            ans[x-97]++;
+        }
+        for(int i=0;i<ans.size();i++){
+            if(!ans[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+};
