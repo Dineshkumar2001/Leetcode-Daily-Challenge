@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
+        string one="";
+        string two="";
+        for(auto N:word1){
+            one+=N;
+        }
+        for(auto M:word2){
+            two+=M;
+        }
+        int size=max(one.length(),two.length());
+        cout<<one;
+        cout<<endl;
+        cout<<two;
+        for(int i=0;i<size;i++){
+            if(one[i]!=two[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+};
